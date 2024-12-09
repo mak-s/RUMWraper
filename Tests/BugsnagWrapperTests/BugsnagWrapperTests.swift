@@ -1,7 +1,7 @@
 import XCTest
 @testable import RumWrapper
 
-final class RumWrapperTests: XCTestCase {
+final class WrapperTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest
