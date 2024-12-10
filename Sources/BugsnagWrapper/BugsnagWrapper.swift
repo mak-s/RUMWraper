@@ -38,8 +38,10 @@ public class BugsnagWrapper: RUMWrapper {
     
     public override class func activateSDK(
         apiKey: String,
+        appId: String,
         captureNetworkRequest: Bool = false,
-        captureSession: Bool = false
+        captureSession: Bool = false,
+        environment: String
     ) {
         let config = BugsnagConfiguration.loadConfig()
         config.apiKey = apiKey

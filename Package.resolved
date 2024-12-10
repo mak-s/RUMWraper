@@ -1,12 +1,21 @@
 {
   "pins" : [
     {
-      "identity" : "bugsnag-cocoa",
+      "identity" : "dd-sdk-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/bugsnag/bugsnag-cocoa",
+      "location" : "https://github.com/DataDog/dd-sdk-ios",
       "state" : {
-        "revision" : "d8b64989126d24ae4f39a50d3ceb749b3c446851",
-        "version" : "6.30.2"
+        "revision" : "d80300ef97bde327891db27eea1052831b14d5e2",
+        "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "plcrashreporter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/microsoft/plcrashreporter.git",
+      "state" : {
+        "revision" : "6752f71de206f6a53fa6a758c3660fd9a7fe7527",
+        "version" : "1.11.2"
       }
     }
   ],
