@@ -17,12 +17,11 @@ import Foundation
 // -- API key management for different Enterprise apps?
 
 
-import RumWrapper
 import Bugsnag
 // for capturing network request
 import BugsnagNetworkRequestPlugin
 
-public class BugsnagWrapper: RUMWrapper {
+public class BugsnagWrapper {
     
     /// Bugsnag initialization needs to take place ass soon as the app is launched
     ///
@@ -36,12 +35,10 @@ public class BugsnagWrapper: RUMWrapper {
     /// when using App Extensions: in extension ViewController initializer
     /// https://docs.bugsnag.com/platforms/ios/#app-extensions
     
-    public override class func activateSDK(
+    public class func activateSDK(
         apiKey: String,
-        appId: String,
         captureNetworkRequest: Bool = false,
-        captureSession: Bool = false,
-        environment: String
+        captureSession: Bool = false
     ) {
         let config = BugsnagConfiguration.loadConfig()
         config.apiKey = apiKey
@@ -95,7 +92,7 @@ public class BugsnagWrapper: RUMWrapper {
         Bugsnag.start(with: config)
     }
     
-    public override class func emitEvent(
+    public class func emitEvent(
         message: String,
         metadata: [String: Any]?
     ) {

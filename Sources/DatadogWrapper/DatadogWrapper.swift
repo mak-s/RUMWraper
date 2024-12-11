@@ -1,5 +1,4 @@
 import Foundation
-import RumWrapper
 import DatadogCore
 import DatadogRUM
 
@@ -10,9 +9,9 @@ import DatadogWebViewTracking
 /// Document suggests using Datadog package v `2.0.0`
 /// Current latest is `2.20.0`
 
-public class DatadogWrapper: RUMWrapper {
+public class DatadogWrapper {
     
-    public override class func activateSDK(
+    public class func activateSDK(
         apiKey: String,
         appId: String,
         captureNetworkRequest: Bool = false,
@@ -27,6 +26,12 @@ public class DatadogWrapper: RUMWrapper {
             ),
             trackingConsent: .granted
         )
+        let urlSesionTracking: RUM.Configuration.URLSessionTracking?
+        if captureNetworkRequest {
+            urlSesionTracking = RUM.Configuration.URLSessionTracking()
+        } else {
+            urlSesionTracking = nil
+        }
         
         RUM.enable(
             with: RUM.Configuration(
@@ -34,7 +39,7 @@ public class DatadogWrapper: RUMWrapper {
                 sessionSampleRate: 50,
                 uiKitViewsPredicate: DefaultUIKitRUMViewsPredicate(),
                 uiKitActionsPredicate: DefaultUIKitRUMActionsPredicate(),
-                urlSessionTracking: RUM.Configuration.URLSessionTracking(),
+                urlSessionTracking: urlSesionTracking,
                 trackBackgroundEvents: true
             )
         )
