@@ -21,10 +21,10 @@ let package = Package(
             targets: ["InstabugWrapper"])
     ],
     dependencies: [
-        .package(url: "https://github.com/bugsnag/bugsnag-cocoa", exact: "6.30.2"),
-        .package(url: "https://github.com/DataDog/dd-sdk-ios", exact: "2.0.0"),
-        .package(url: "https://github.com/Instabug/Instabug-SP", exact: "14.0.0"),
-        .package(url: "https://github.com/embrace-io/embrace-apple-sdk", exact: "6.5.2"),
+        .package(url: "https://github.com/bugsnag/bugsnag-cocoa", .upToNextMajor(from:"6.30.2")),
+        .package(url: "https://github.com/DataDog/dd-sdk-ios", .upToNextMajor(from: "2.0.0")),
+        .package(url: "https://github.com/Instabug/Instabug-SP", .upToNextMajor(from: "14.0.0")),
+        .package(url: "https://github.com/embrace-io/embrace-apple-sdk", .upToNextMajor(from: "6.5.2"))
     ],
     targets: [
         .target(

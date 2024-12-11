@@ -62,7 +62,7 @@ public class DatadogWrapper {
     public func track(sessionDelegate: URLSessionDelegate) {
         //TODO: ??
         // Documentation API not available
-        // URLSessionInstrumentation.enable(with: sessionDelegate)
+         URLSessionInstrumentation.enable(with: sessionDelegate)
     }
     
     // MARK: - Tracking SwiftUI views

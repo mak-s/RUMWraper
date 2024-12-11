@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/DataDog/dd-sdk-ios",
       "state" : {
-        "revision" : "d80300ef97bde327891db27eea1052831b14d5e2",
-        "version" : "2.0.0"
+        "revision" : "f61d258210f8d327ad9464f1087d20e35e8bd1e0",
+        "version" : "2.21.0"
       }
     },
     {
@@ -70,6 +70,15 @@
       "state" : {
         "revision" : "0dd37c4a14a6aeeb131eea40a13cb3832c7c6a97",
         "version" : "1.10.1"
+      }
+    },
+    {
+      "identity" : "opentelemetry-swift-packages",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/DataDog/opentelemetry-swift-packages.git",
+      "state" : {
+        "revision" : "adcfc3d7fc6ad411bb576cfa4512c2d3f8b2dbc7",
+        "version" : "1.6.0"
       }
     },
     {
