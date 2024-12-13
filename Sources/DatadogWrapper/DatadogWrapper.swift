@@ -22,7 +22,8 @@ public class DatadogWrapper {
         Datadog.initialize(
             with: Datadog.Configuration(
                 clientToken: apiKey,
-                env: environment
+                env: environment,
+                site: .us1
             ),
             trackingConsent: .granted
         )
@@ -36,7 +37,7 @@ public class DatadogWrapper {
         RUM.enable(
             with: RUM.Configuration(
                 applicationID: appId,
-                sessionSampleRate: 50,
+//                sessionSampleRate: 50,
                 uiKitViewsPredicate: DefaultUIKitRUMViewsPredicate(),
                 uiKitActionsPredicate: DefaultUIKitRUMActionsPredicate(),
                 urlSessionTracking: urlSesionTracking,
