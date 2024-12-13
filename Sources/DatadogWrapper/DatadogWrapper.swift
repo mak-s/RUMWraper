@@ -60,10 +60,10 @@ public class DatadogWrapper {
     /// track network request metrics via a given session Delegate
     /// - a session used for network request must use the given session delegate
     /// - Parameter sessionDelegate: a `ULRSessionDelegate` instance used to initialize a`URLSession` instance, that is used for network requests
-    public func track(sessionDelegate: URLSessionDelegate) {
+    public func track(sessionDelegate: URLSessionDataDelegate.Type) {
         //TODO: ??
         // Documentation API not available
-         URLSessionInstrumentation.enable(with: sessionDelegate)
+        URLSessionInstrumentation.enable(with: URLSessionInstrumentation.Configuration(delegateClass: sessionDelegate))
     }
     
     // MARK: - Tracking SwiftUI views
